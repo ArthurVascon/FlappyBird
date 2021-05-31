@@ -29,13 +29,15 @@ public class jogo extends ApplicationAdapter {
 	//Background
 	private Texture fundo;
 
-    private Texture canoSuperior;//imagem do cano superior
-    private Texture canoInferior;//imagem do cano inferior
-    private Texture gameOver; //imagem de game over
+	//Texturas do cano e fim de jogo
+    private Texture canoSuperior;
+    private Texture canoInferior;
+    private Texture gameOver;
 
-    private int pontuacaoMaxima = 0; //int que guarda a pontuação maxima obtida
-    private int pontos = 0; //int de pontos na partida
-    private int estadoJogo = 0;//altera os estados do jogo
+    //Pontuação e estado de jogo
+    private int pontuacaoMaxima = 0;
+    private int pontos = 0;
+    private int estadoJogo = 0;
 
 	//Eixos de movimentação
 	private int movimentaY = 0;
@@ -48,8 +50,8 @@ public class jogo extends ApplicationAdapter {
     private float posicaoHorizontalPassaro = 0;
 
 	//Tela do Dispositivo
-	private float larguraDispositivo;  //para colocar a largura do celular
-	private float alturaDispositivo;   //para colocar a altura do celular
+	private float larguraDispositivo;
+	private float alturaDispositivo;
 
     //Posicionamento do cano
     private float posicaoCanoHorizontal = 0;
@@ -57,15 +59,16 @@ public class jogo extends ApplicationAdapter {
     //Calcula espaço entre os canos
     private float espaçoEntreCanos;
 
+    //Randomizador dos canos
+    private Random random;
 
-    private Random random; //usado para randomizar os canos
+    //Verificador se passou no cano
+    private boolean passouCano = false;
 
-    private boolean passouCano = false; //bool que verifica se passou pelo cano
-
-    //variaveis com os textos
-    BitmapFont textoPontuacao; //texto de pontuação
-    BitmapFont textoReiniciar; //texto de reinicio
-    BitmapFont textoMelhorPontuacao; //texto da melhor pontuação
+    //Bitmap dos textos que serão renderizados
+    BitmapFont textoPontuacao;
+    BitmapFont textoReiniciar;
+    BitmapFont textoMelhorPontuacao;
 
     //variaveis dos sons do jogo
     Sound somColisao;
