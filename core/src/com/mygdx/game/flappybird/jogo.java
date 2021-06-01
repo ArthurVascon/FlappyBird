@@ -117,7 +117,7 @@ public class jogo extends ApplicationAdapter {
 
         textoMelhorPontuacao = new BitmapFont();
         textoMelhorPontuacao.setColor(Color.GREEN);
-        textoMelhorPontuacao.getData().setScale(4);
+        textoMelhorPontuacao.getData().setScale(3);
 
         textoReiniciar = new BitmapFont();
         textoReiniciar.setColor(Color.PINK);
@@ -244,7 +244,7 @@ public class jogo extends ApplicationAdapter {
         {
             batch.draw(gameOver, larguraDispositivo / 2 +200 - gameOver.getWidth(), alturaDispositivo / 2);
             textoReiniciar.draw(batch, "TOQUE PARA REINICIAR", larguraDispositivo / 2 - 250, alturaDispositivo /2 - gameOver.getHeight() / 2);
-            textoMelhorPontuacao.draw(batch, "MELHOR PONTUAÇÃO: " + pontuacaoMaxima +" Pontos", larguraDispositivo /2 - 250, alturaDispositivo /2 - gameOver.getHeight() * 2);
+            textoMelhorPontuacao.draw(batch, "MELHOR PONTUAÇÃO: \n" + pontuacaoMaxima +" Pontos", larguraDispositivo /2 - 250, alturaDispositivo /2 - gameOver.getHeight() * 2);
         }
         //Termina execução
         batch.end();
